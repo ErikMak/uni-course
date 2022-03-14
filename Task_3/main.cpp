@@ -2,10 +2,10 @@
 Author: ErikMak
 Task:
 
-3) Поиск наиболее встречаемого слова
-а) Произвольный введенный текст пользователем
-б) Поиск подходящего слова
-в) Реализация отдельной функции
+3) РџРѕРёСЃРє РЅР°РёР±РѕР»РµРµ РІСЃС‚СЂРµС‡Р°РµРјРѕРіРѕ СЃР»РѕРІР°
+Р°) РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РІРІРµРґРµРЅРЅС‹Р№ С‚РµРєСЃС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
+Р±) РџРѕРёСЃРє РїРѕРґС…РѕРґСЏС‰РµРіРѕ СЃР»РѕРІР°
+РІ) Р РµР°Р»РёР·Р°С†РёСЏ РѕС‚РґРµР»СЊРЅРѕР№ С„СѓРЅРєС†РёРё
 
 */
 #include <iostream>
@@ -34,15 +34,15 @@ void findFrequentWord(std::vector<std::string> arr) {
 	
 	if (max > 1) {
 		std::cout << "\n===================================" << std::endl;
-		std::cout << "Чаще всего встречалось слово: " << buff << ". Его частота: " << max << std::endl;
+		std::cout << "Р§Р°С‰Рµ РІСЃРµРіРѕ РІСЃС‚СЂРµС‡Р°Р»РѕСЃСЊ СЃР»РѕРІРѕ: " << buff << ". Р•РіРѕ С‡Р°СЃС‚РѕС‚Р°: " << max << std::endl;
 	} else {
 		std::cout << "\n===================================" << std::endl;
-		std::cout << "Все слова в тексте встретились с одинаковой частотой" << std::endl;
+		std::cout << "Р’СЃРµ СЃР»РѕРІР° РІ С‚РµРєСЃС‚Рµ РІСЃС‚СЂРµС‚РёР»РёСЃСЊ СЃ РѕРґРёРЅР°РєРѕРІРѕР№ С‡Р°СЃС‚РѕС‚РѕР№" << std::endl;
 	}
 }
 void findRightWord(std::vector<std::string> arr) {
 	std::string f_word;
-	std::cout << "\nВведите подходящее слово:" << std::endl;
+	std::cout << "\nР’РІРµРґРёС‚Рµ РїРѕРґС…РѕРґСЏС‰РµРµ СЃР»РѕРІРѕ:" << std::endl;
 	std::cin.clear();
 	std::cin.sync();
     std::getline(std::cin, f_word);
@@ -56,10 +56,10 @@ void findRightWord(std::vector<std::string> arr) {
     
     if(!counter){
     	std::cout << "===================================" << std::endl;
-    	std::cout << "Такого слова нет в тексте!" << std::endl;
+    	std::cout << "РўР°РєРѕРіРѕ СЃР»РѕРІР° РЅРµС‚ РІ С‚РµРєСЃС‚Рµ!" << std::endl;
 	} else {
 		std::cout << "===================================" << std::endl;
-		std::cout << "Найдено слово «" << f_word << "». Частота появления: " << counter << std::endl;
+		std::cout << "РќР°Р№РґРµРЅРѕ СЃР»РѕРІРѕ В«" << f_word << "В». Р§Р°СЃС‚РѕС‚Р° РїРѕСЏРІР»РµРЅРёСЏ: " << counter << std::endl;
 	}
 }
 
@@ -69,7 +69,7 @@ int getMenuItem() {
     scanf("%s", s);
 
     while (sscanf(s, "%d", &key) != 1 || key < 1 || key > 6) {
-        std::cout << "Ошибка ввода!" << std::endl;
+        std::cout << "РћС€РёР±РєР° РІРІРѕРґР°!" << std::endl;
         scanf("%s", s);
     }
     return key;
@@ -77,12 +77,12 @@ int getMenuItem() {
 
 int main() {
 	system("color 70");
-	SetConsoleCP(1251);
-   	SetConsoleOutputCP(1251);
+	SetConsoleCP(CP_UTF8);
+   	SetConsoleOutputCP(CP_UTF8);
 		
 	std::stringstream ss;
 	std::string text_input;
-	std::cout << "Введите текст для дальнейшей работы:" << std::endl;
+	std::cout << "Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚ РґР»СЏ РґР°Р»СЊРЅРµР№С€РµР№ СЂР°Р±РѕС‚С‹:" << std::endl;
 	std::getline(std::cin, text_input);
 	ss << text_input;
 	
@@ -92,9 +92,9 @@ int main() {
 		arr.push_back(word);
 	
 	std::cout << "\n===================================" << std::endl;
-    std::cout << "1. Найти самое часто встречающиеся слово" << std::endl;
-    std::cout << "2. Сколько встретилось слово?" << std::endl;
-    std::cout << "3. Выйти" << std::endl;
+    std::cout << "1. РќР°Р№С‚Рё СЃР°РјРѕРµ С‡Р°СЃС‚Рѕ РІСЃС‚СЂРµС‡Р°СЋС‰РёРµСЃСЏ СЃР»РѕРІРѕ" << std::endl;
+    std::cout << "2. РЎРєРѕР»СЊРєРѕ РІСЃС‚СЂРµС‚РёР»РѕСЃСЊ СЃР»РѕРІРѕ?" << std::endl;
+    std::cout << "3. Р’С‹Р№С‚Рё" << std::endl;
 
 	int key;
 	do {

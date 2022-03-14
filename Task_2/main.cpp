@@ -2,15 +2,15 @@
 Author: ErikMak
 Task:
 
-Обработка строк
-а) Бесконечный Цикл
-б) Реализация метода выход
-в) Реализация методов функционала
-г) Преобразование введенной строки в ВЕРХНИЙ регистр
-д) Преобразование введенной строки в НИЖНИЙ регистр
-е) Конкатенация введенных строк
-ё) Вывод строк в файл
-ж) Чтение из произвольного файла(Строка слов с пробелами, например, "С++ компилируемый статически типизированный язык")
+РћР±СЂР°Р±РѕС‚РєР° СЃС‚СЂРѕРє
+Р°) Р‘РµСЃРєРѕРЅРµС‡РЅС‹Р№ Р¦РёРєР»
+Р±) Р РµР°Р»РёР·Р°С†РёСЏ РјРµС‚РѕРґР° РІС‹С…РѕРґ
+РІ) Р РµР°Р»РёР·Р°С†РёСЏ РјРµС‚РѕРґРѕРІ С„СѓРЅРєС†РёРѕРЅР°Р»Р°
+Рі) РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІРІРµРґРµРЅРЅРѕР№ СЃС‚СЂРѕРєРё РІ Р’Р•Р РҐРќРР™ СЂРµРіРёСЃС‚СЂ
+Рґ) РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІРІРµРґРµРЅРЅРѕР№ СЃС‚СЂРѕРєРё РІ РќРР–РќРР™ СЂРµРіРёСЃС‚СЂ
+Рµ) РљРѕРЅРєР°С‚РµРЅР°С†РёСЏ РІРІРµРґРµРЅРЅС‹С… СЃС‚СЂРѕРє
+С‘) Р’С‹РІРѕРґ СЃС‚СЂРѕРє РІ С„Р°Р№Р»
+Р¶) Р§С‚РµРЅРёРµ РёР· РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ С„Р°Р№Р»Р°(РЎС‚СЂРѕРєР° СЃР»РѕРІ СЃ РїСЂРѕР±РµР»Р°РјРё, РЅР°РїСЂРёРјРµСЂ, "РЎ++ РєРѕРјРїРёР»РёСЂСѓРµРјС‹Р№ СЃС‚Р°С‚РёС‡РµСЃРєРё С‚РёРїРёР·РёСЂРѕРІР°РЅРЅС‹Р№ СЏР·С‹Рє")
 
 */
 
@@ -26,7 +26,7 @@ int getMenuItem() {
     scanf("%s", s);
 
     while (sscanf(s, "%d", &key) != 1 || key < 1 || key > 6) {
-        std::cout << "Ошибка ввода!"<< std::endl;
+        std::cout << "РћС€РёР±РєР° РІРІРѕРґР°!"<< std::endl;
         scanf("%s", s);
     }
     return key;
@@ -36,8 +36,8 @@ std::string toUpperCase(std::string str){
 	for(int i = 0; i < str.length(); i++) {
 	    if(str[i]<='z' && str[i]>='a')
 		    str[i]+='A'-'a';
-		else if(str[i]<='я' && str[i]>='а')
-		    str[i]+='Я'-'я';
+		else if(str[i]<='СЏ' && str[i]>='Р°')
+		    str[i]+='РЇ'-'СЏ';
 	}
 	return str;
 }
@@ -46,8 +46,8 @@ std::string toLowerCase(std::string str) {
 	for(int i = 0; i < str.length(); i++) {
 	    if(str[i]>'A' && str[i]<'Z') 
 			str[i]+='z'-'Z';
-	    else if(str[i]>'А' && str[i]<'Я') 
-			str[i]+='я'-'Я';
+	    else if(str[i]>'Рђ' && str[i]<'РЇ') 
+			str[i]+='СЏ'-'РЇ';
 	}
 	return str;
 }
@@ -61,7 +61,7 @@ void uploadToFile(const std::string str) {
 std::string uploadFromFile(char path[256], std::string str) {
 	std::ifstream fout(path, std::ios::out);
 	if (!fout.good()) {
-		std::cout << "\nОшибка чтения файла!";
+		std::cout << "\nРћС€РёР±РєР° С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р°!";
         std::cout << "\n===================================" << std::endl;
 	} else {
 		std::getline(fout, str);
@@ -71,7 +71,7 @@ std::string uploadFromFile(char path[256], std::string str) {
 
 std::string toJoinString(std::string str) {
 	std::string buff;
-	std::cout << "\nВведите строку, которую собираетесь добавить:" << std::endl;
+	std::cout << "\nР’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ, РєРѕС‚РѕСЂСѓСЋ СЃРѕР±РёСЂР°РµС‚РµСЃСЊ РґРѕР±Р°РІРёС‚СЊ:" << std::endl;
 	std::cin.clear();
 	std::cin.sync();
     std::getline(std::cin, buff);
@@ -79,23 +79,23 @@ std::string toJoinString(std::string str) {
 } 
 
 int main() {
-	SetConsoleCP(1251);
-   	SetConsoleOutputCP(1251);
+	SetConsoleCP(CP_UTF8);
+   	SetConsoleOutputCP(CP_UTF8);
    	system("color 70");
    	
 	std::string str;
 	std::string buff;
 	
-	std::cout << "Строка для редактирования:" << std::endl;
+	std::cout << "РЎС‚СЂРѕРєР° РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ:" << std::endl;
 	std::getline(std::cin, str);
 	
 	std::cout << "\n===================================" << std::endl;
-    std::cout << "1. Преобразование в верхний регистр" << std::endl;
-    std::cout << "2. Преобразование в нижний регистр" << std::endl;
-    std::cout << "3. Конкатенация со строкой" << std::endl;
-    std::cout << "4. Вывод строк в файл" << std::endl;
-    std::cout << "5. Прочитать с файла" << std::endl;
-    std::cout << "6. Выйти" << std::endl;
+    std::cout << "1. РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ РІРµСЂС…РЅРёР№ СЂРµРіРёСЃС‚СЂ" << std::endl;
+    std::cout << "2. РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ РЅРёР¶РЅРёР№ СЂРµРіРёСЃС‚СЂ" << std::endl;
+    std::cout << "3. РљРѕРЅРєР°С‚РµРЅР°С†РёСЏ СЃРѕ СЃС‚СЂРѕРєРѕР№" << std::endl;
+    std::cout << "4. Р’С‹РІРѕРґ СЃС‚СЂРѕРє РІ С„Р°Р№Р»" << std::endl;
+    std::cout << "5. РџСЂРѕС‡РёС‚Р°С‚СЊ СЃ С„Р°Р№Р»Р°" << std::endl;
+    std::cout << "6. Р’С‹Р№С‚Рё" << std::endl;
 
 	int key;
 	do {
@@ -104,36 +104,36 @@ int main() {
 		switch (key) {
             case 1:
             	str = toUpperCase(str);
-            	std::cout << "\nСтрока после изменения:" << std::endl;
+            	std::cout << "\nРЎС‚СЂРѕРєР° РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ:" << std::endl;
     			std::cout << str;
     			std::cout << "\n===================================" << std::endl;
                 break;
             case 2:
             	str = toLowerCase(str);
-            	std::cout << "\nСтрока после изменения:" << std::endl;
+            	std::cout << "\nРЎС‚СЂРѕРєР° РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ:" << std::endl;
     			std::cout << str;
     			std::cout << "\n===================================" << std::endl;
                 break;
             case 3:
             	str = toJoinString(str);
-            	std::cout << "\nСтрока после изменения:" << std::endl;
+            	std::cout << "\nРЎС‚СЂРѕРєР° РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ:" << std::endl;
     			std::cout << str;
     			std::cout << "\n===================================" << std::endl;
                 break;
             case 4:
             	uploadToFile(str);
-            	std::cout << "\nДанные были успешно выведены в файл output.txt";
+            	std::cout << "\nР”Р°РЅРЅС‹Рµ Р±С‹Р»Рё СѓСЃРїРµС€РЅРѕ РІС‹РІРµРґРµРЅС‹ РІ С„Р°Р№Р» output.txt";
             	std::cout << "\n===================================" << std::endl;
             	system("output.txt");
                 break;
             case 5:
-            	std::cout << "\nВведите путь к файлу, который необходимо прочитать:" << std::endl;
+            	std::cout << "\nР’РІРµРґРёС‚Рµ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ, РєРѕС‚РѕСЂС‹Р№ РЅРµРѕР±С…РѕРґРёРјРѕ РїСЂРѕС‡РёС‚Р°С‚СЊ:" << std::endl;
             	char path[256];
             	std::cin.clear();
 				std::cin.sync();
     			std::cin.getline(path, 256);
             	str = uploadFromFile(path, str);
-            	std::cout << "\nСтрока, загруженная с файла:" << std::endl;
+            	std::cout << "\nРЎС‚СЂРѕРєР°, Р·Р°РіСЂСѓР¶РµРЅРЅР°СЏ СЃ С„Р°Р№Р»Р°:" << std::endl;
     			std::cout << str;
     			std::cout << "\n===================================" << std::endl;
             	break;

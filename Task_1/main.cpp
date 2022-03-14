@@ -2,10 +2,10 @@
 Author: ErikMak
 Task:
 
-Êàëüêóëÿòîð íà switch()
-à)Ðåàëèçàöèÿ 4-õ îïåðàöèé: "+", "-", "*", "/"
-á)Ðåàëèçàöèÿ ââîäà 2-õ îïåðàíäîâ è 1-ãî îïåðàòîðà
-â)Îáðàáîòêà äîïóñòèìûõ îøèáîê(Äåëåíèÿ íà íîëü, ïðîâåðêà íà ïóñòóþ ñòðîêó è ò.ä.)
+ÐšÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€ Ð½Ð° switch()
+Ð°)Ð ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ 4-Ñ… Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¹: "+", "-", "*", "/"
+Ð±)Ð ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð²Ð²Ð¾Ð´Ð° 2-Ñ… Ð¾Ð¿ÐµÑ€Ð°Ð½Ð´Ð¾Ð² Ð¸ 1-Ð³Ð¾ Ð¾Ð¿ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð°
+Ð²)ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ° Ð´Ð¾Ð¿ÑƒÑÑ‚Ð¸Ð¼Ñ‹Ñ… Ð¾ÑˆÐ¸Ð±Ð¾Ðº(Ð”ÐµÐ»ÐµÐ½Ð¸Ñ Ð½Ð° Ð½Ð¾Ð»ÑŒ, Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° Ð¿ÑƒÑÑ‚ÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð¸ Ñ‚.Ð´.)
 
 */
 
@@ -15,11 +15,11 @@ Task:
 char getOperator() {
 	char operation;
 	
-	printf("Ââåäèòå äîñòóïíîå äåéñòâèå:\nñëîæåíèå => +\nâû÷èòàíèå => -\nóìíîæåíèå => *\näåëåíèå => /\n\n");	
+	printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ð¾Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:\nÑÐ»Ð¾Ð¶ÐµÐ½Ð¸Ðµ => +\nÐ²Ñ‹Ñ‡Ð¸Ñ‚Ð°Ð½Ð¸Ðµ => -\nÑƒÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ => *\nÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ => /\n\n");	
 	char s[100];
     scanf("%s", s);
     while (sscanf(s, "%c", &operation) != 1 || ((int)operation != 45 && (int)operation != 43 && (int)operation != 47 && (int)operation != 42)) {
-        std::cout << "Îøèáêà ââîäà!" << std::endl;
+        std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°!" << std::endl;
         scanf("%s", s);
     }
     return operation;
@@ -31,15 +31,15 @@ float getNumericType() {
     scanf("%s", s);
 
     while (!sscanf(s, "%f", &number)) {
-        std::cout << "Îøèáêà ââîäà! Ââåäèòå åùå ðàç:" << std::endl;
+        std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°! Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·:" << std::endl;
         scanf("%s", s);
     }
     return number;
 }
 
 int main() {
-	SetConsoleCP(1251);
-   	SetConsoleOutputCP(1251);
+	SetConsoleCP(CP_UTF8);
+   	SetConsoleOutputCP(CP_UTF8);
    	system("color 70");
 	
 	float a, b;
@@ -47,36 +47,36 @@ int main() {
 	char operation = getOperator();
 	switch (operation){
     	case '-':
-		    printf("Ïåðâîå ÷èñëî: ");
+		    printf("ÐŸÐµÑ€Ð²Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ");
 			a = getNumericType();			
-			printf("Âòîðîå ÷èñëî: ");
+			printf("Ð’Ñ‚Ð¾Ñ€Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ");
 			b = getNumericType();
 
         	std::cout << a <<" - " << b << " = " << a - b <<'\n';
         	break;
     	case '+':
-        	printf("Ïåðâîå ÷èñëî: ");
+        	printf("ÐŸÐµÑ€Ð²Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ");
 			a = getNumericType();			
-			printf("Âòîðîå ÷èñëî: ");
+			printf("Ð’Ñ‚Ð¾Ñ€Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ");
 			b = getNumericType();
 
         	std::cout << a <<" + " << b << " = " << a + b <<'\n';
         	break;
     	case '*':
-        	printf("Ïåðâîå ÷èñëî: ");
+        	printf("ÐŸÐµÑ€Ð²Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ");
 			a = getNumericType();			
-			printf("Âòîðîå ÷èñëî: ");
+			printf("Ð’Ñ‚Ð¾Ñ€Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ");
 			b = getNumericType();
 
         	std::cout << a << " * " << b << " = " << a * b <<'\n';
         	break;
     	case '/':
-    		printf("Ïåðâîå ÷èñëî: ");
+    		printf("ÐŸÐµÑ€Ð²Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ");
 			a = getNumericType();			
-			printf("Âòîðîå ÷èñëî: ");
+			printf("Ð’Ñ‚Ð¾Ñ€Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ");
 			b = getNumericType();
 			while(b == 0){
-				std::cout << "Äåëèòåëü íå ìîæåò áûòü ðàâíûì 0. Ââåäèòå åùå ðàç:" << std::endl;
+				std::cout << "Ð”ÐµÐ»Ð¸Ñ‚ÐµÐ»ÑŒ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ñ€Ð°Ð²Ð½Ñ‹Ð¼ 0. Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·:" << std::endl;
 				b = getNumericType();
 			}
 			std::cout << a << " / " << b << " = " << a / b <<'\n';

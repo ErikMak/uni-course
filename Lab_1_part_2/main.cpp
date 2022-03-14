@@ -2,9 +2,9 @@
 Author: ErikMak
 Task:
 
-Îïèñàòü è ïğèìåíèòü ê ìàòğèöå A ğàçìåğà M x N ïğîöåäóğó DellJ(A, M, N, i, j), 
-óäàëÿşùóş ñòğîêó è ñòîëáåö, ñîäåğæàùèå ıëåìåíò A[i][j] (åñëè i > M èëè j > N, 
-òî ìàòğèöà íå èçìåíÿåòñÿ). Âûâåñòè ïîëó÷åííóş ìàòğèöó.
+ĞĞ¿Ğ¸ÑĞ°Ñ‚ÑŒ Ğ¸ Ğ¿Ñ€Ğ¸Ğ¼ĞµĞ½Ğ¸Ñ‚ÑŒ Ğº Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ğµ A Ñ€Ğ°Ğ·Ğ¼ĞµÑ€Ğ° M x N Ğ¿Ñ€Ğ¾Ñ†ĞµĞ´ÑƒÑ€Ñƒ DellJ(A, M, N, i, j), 
+ÑƒĞ´Ğ°Ğ»ÑÑÑ‰ÑƒÑ ÑÑ‚Ñ€Ğ¾ĞºÑƒ Ğ¸ ÑÑ‚Ğ¾Ğ»Ğ±ĞµÑ†, ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ°Ñ‰Ğ¸Ğµ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ A[i][j] (ĞµÑĞ»Ğ¸ i > M Ğ¸Ğ»Ğ¸ j > N, 
+Ñ‚Ğ¾ Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ğ° Ğ½Ğµ Ğ¸Ğ·Ğ¼ĞµĞ½ÑĞµÑ‚ÑÑ). Ğ’Ñ‹Ğ²ĞµÑÑ‚Ğ¸ Ğ¿Ğ¾Ğ»ÑƒÑ‡ĞµĞ½Ğ½ÑƒÑ Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ñƒ.
 
 */
 
@@ -15,7 +15,7 @@ void DellJ(float **&A, int &M, int &N, int i, int j){
     if(i > M || j > N) { // Validate
         return;
     } 
-    std::cout << "Ñòğîêà: " << i << "\tÑòîëáåö: " << j << std::endl;
+    std::cout << "Ğ¡Ñ‚Ñ€Ğ¾ĞºĞ°: " << i << "\tĞ¡Ñ‚Ğ¾Ğ»Ğ±ĞµÑ†: " << j << std::endl;
 
     float **tmp = new float *[M-1]; // New temp array
     for(int k = 0; k < M-1; k++)
@@ -53,16 +53,16 @@ void printArr(float **A, const int M, const int N){
     }
 }
 int main() {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int M, N;
     do { // Validate
-        std::cout << "Êîëè÷åñòâî ñòğîê: ";
+        std::cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑÑ‚Ñ€Ğ¾Ğº: ";
         std::cin >> M;
     } while (M <= 1);
     do {
-        std::cout << "Êîëè÷åñòâî ñòîëáöîâ: ";
+        std::cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑÑ‚Ğ¾Ğ»Ğ±Ñ†Ğ¾Ğ²: ";
         std::cin >> N;
     } while (N <= 1);
 
@@ -74,7 +74,7 @@ int main() {
     // Input array
     std::cout << "========================" << std::endl;
     for(int i=0; i<M; i++){
-        std::cout << "Ââîä " << i+1 << " ñòğîêè:" << std::endl;
+        std::cout << "Ğ’Ğ²Ğ¾Ğ´ " << i+1 << " ÑÑ‚Ñ€Ğ¾ĞºĞ¸:" << std::endl;
         for(int j=0; j<N; j++){
             std::cin >> A[i][j];
         }
@@ -82,14 +82,14 @@ int main() {
     std::cout << "========================" << std::endl;
     printArr(A, M, N);
     int i, j;
-    std::cout << "Ââåäèòå i (ñòğîêà): ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ i (ÑÑ‚Ñ€Ğ¾ĞºĞ°): ";
     std::cin >> i;
-    std::cout << "Ââåäèòå j (ñòîëáåö): ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ j (ÑÑ‚Ğ¾Ğ»Ğ±ĞµÑ†): ";
     std::cin >> j;
     DellJ(A, M, N, i, j);
 
     // Output result
-    std::cout << "========================\nĞåçóëüòàò:" << std::endl;
+    std::cout << "========================\nĞ ĞµĞ·ÑƒĞ»ÑŒÑ‚Ğ°Ñ‚:" << std::endl;
     printArr(A, M, N);
 
     // Release memory of new array
