@@ -43,7 +43,9 @@ class TriangleSteel : public RolledSteel {
     public:
         TriangleSteel(int const a, int const b) : RolledSteel(a, b) { }
         // Переопределение виртуальной функции getArea
-        float getArea() override;
+        float getArea() override {
+            return (0.5 * this->getArea());
+        };
 };
 
 RolledSteel::RolledSteel (int const a, int const b) {
@@ -64,10 +66,6 @@ void RolledSteel::getInfo() {
     std::cout << "===================================" << std::endl;
 }
 
-float TriangleSteel::getArea() {
-    return (0.5 * this->getArea());
-}
-
 // Создать quantity прямоугольных листов
 void addRectangleSteel(int const quantity, std::vector<RolledSteel>& produce) {
     int a, b;
@@ -78,7 +76,7 @@ void addRectangleSteel(int const quantity, std::vector<RolledSteel>& produce) {
 
         produce.push_back(RolledSteel(a, b));
     }
-};
+}
 // Создать quantity квадратных листов
 void addSquareSteel(int const quantity, std::vector<RolledSteel>& produce) {
     int a;
@@ -88,7 +86,7 @@ void addSquareSteel(int const quantity, std::vector<RolledSteel>& produce) {
 
         produce.push_back(SquareSteel(a));
     }
-};
+}
 // Создать quantity треугольных листов
 void addTriangleSteel(int const quantity, std::vector<RolledSteel>& produce) {
     int a, b;
@@ -99,7 +97,7 @@ void addTriangleSteel(int const quantity, std::vector<RolledSteel>& produce) {
 
         produce.push_back(TriangleSteel(a, b));
     }
-};
+}
 
 // Инициализация статических переменных
 int RolledSteel::thickness = 4;
