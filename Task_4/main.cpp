@@ -11,6 +11,7 @@ Task:
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 #include <windows.h>
 
@@ -38,25 +39,28 @@ class CustomStack {
 
 CustomStack::CustomStack() {
     sizeOfStack = 0; 
-    mData = new int[100];
+    mData = (int*) malloc(sizeof(int));
 }
 void CustomStack::push(const int val) {
     mData[sizeOfStack] = val;
-    sizeOfStack++;
+    ++sizeOfStack;
+    // Выделяем память на следующий элемент
+    mData = (int*) realloc(mData, (sizeOfStack+1)*sizeof(int));
 }
 void CustomStack::pop() {
     // Предварительная проверка на пустой массив
     if (this->empty()) {
         throw "error";
     } else {
-        sizeOfStack--;
+        mData = (int*) realloc(mData, sizeOfStack*sizeof(int));
+        --sizeOfStack;
     }
 }
 std::size_t CustomStack::size() {
     return sizeOfStack;
 }
 bool CustomStack::empty() {
-    if(!sizeOfStack) 
+    if(sizeOfStack == 0) 
         return true;
     else 
         return false;
@@ -71,10 +75,11 @@ int CustomStack::top() {
 }
 void CustomStack::extend(const int n) {
     for(int i=0; i<n; i++)
-        sizeOfStack++;
+        ++sizeOfStack;
+    mData = (int*) realloc(mData, (sizeOfStack+1)*sizeof(int));
 }
 CustomStack::~CustomStack() {
-    delete[] mData;
+    free(mData);
 }
 
 // Является ли строка числом
@@ -105,7 +110,6 @@ int convertToInt(char *str){
     }
 }
 
-// Проверка на пустой массив
 int main() {
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
@@ -113,10 +117,11 @@ int main() {
     CustomStack stack;
 
     const unsigned int str_size = 100;
-    char str[str_size] = "1 -10 - 2 *";
+    char str[str_size];
+    std::cin.getline(str, str_size);
     
     char *p_str = strtok(str," ");
-    
+
     try {
         while (p_str != NULL) {
             if(isNumeric(p_str)) {
