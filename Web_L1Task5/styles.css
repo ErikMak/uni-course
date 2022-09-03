@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffbf6;
+}
+#menu,
+#top,
+#content,
+#bottom {
+  background-color: #fef5e9;
+  border: solid 1px black;
+  padding: 1.2em;
+}
+#menu {
+  float: left;
+  width: 20%;
+}
+#content {
+  margin-left: 23%;
+  margin-bottom: 5px;
+}
+#content p {
+  margin-left: 1em;
+}
+#content strong {
+  text-decoration: underline;
+  font-weight: normal;
+}
+#content .img-wrapper {
+  margin-left: 1em;
+  padding: 2%;
+  height: 350px;
+  width: fit-content;
+  background-color: white;
+}
+#content .img-wrapper img {
+  height: 100%;
+}
+#content .anchors li {
+  margin: 0.5em 0;
+}
+#top {
+  margin-bottom: 5px;
+}
+#top h2 {
+  margin: 0;
+}
