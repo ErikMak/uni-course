@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#top, #menu, #content, #bottom {
+	background: #e3e8cc;
+	border: solid 1px black;
+}
+
+#top {
+    padding: 10px 0 10px 10px;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+#menu {
+    width: 20%;
+    float: right;
+    padding: 3px;
+}
+#content {
+    margin-right: 21%;
+    margin-bottom: 5px;
+}
+#content p{
+	padding: 3px;
+}
+#bottom {
+    padding: 3px;
+}

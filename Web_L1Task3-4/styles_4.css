@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#top, #bottom {
+	background: #e3e8cc;
+	border: solid 1px black;
+}
+
+#col1 {
+    position: absolute;
+    width: 190px;
+    left: 0px;
+    top: 0px;
+    margin-left: -200px;
+    padding-left: 200px;
+    background: #800000;
+    height: 100%;
+}
+
+#col2 {
+    margin-left: 200px;
+    background: #e0e0e0;
+    padding: 5px;
+}
+
+#container {
+    position: relative;
+}
+
+#top {
+    padding: 10px 0 10px 10px;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+#col2 p{
+	padding: 3px;
+}
+#bottom {
+    padding: 3px;
+}
