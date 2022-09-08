@@ -1,0 +1,114 @@
+@peachy: #fef5e9;
+@light_peachy: #fffbf6;
+
+body {
+	margin:0;
+	padding:0;
+	background-color: @light_peachy;
+}
+
+#menu, #top, #content, #bottom {
+    background-color: @peachy;
+    border: solid 1px black;
+    padding: 1.2em;
+}
+
+#menu {
+	float: left; 
+	width: 20%;
+}
+
+#content{
+    margin-left: 23%;
+    margin-bottom: 5px;
+    p {
+		// margin-left: 1em;
+    }
+    strong {
+    	text-decoration: underline;
+    	font-weight: normal;
+    }
+    .img-wrapper {
+    	margin-left: 1em;
+    	padding: 2%;
+    	height: 350px;
+    	width: fit-content;
+    	background-color: white;
+    }
+    .img-wrapper img {
+		height: 100%;
+    }
+    .anchors li {
+    	margin: 0.5em 0;
+    }
+    .reg-form {
+        width: 320px;
+        label {
+            margin-bottom: 5px;
+        }
+        input, select {
+            padding: 0.5em;
+            border: 2px solid grey;
+            border-radius: 6px;
+        }
+
+        input[type="checkbox"]:checked + span {
+            text-decoration: underline;
+        }
+
+        input[type="text"]:invalid, input[type="email"]:invalid {
+            border: 2px solid #e53838;
+        }
+
+        input[type="text"]:valid, input[type="email"]:valid {
+             border: 2px solid green;
+        }
+
+        .form-group {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-left: 1em;
+            margin-bottom: 1em;
+
+            li {
+                list-style-type: none;
+            }
+            ul {
+                padding-left: 0.8em;
+                margin-bottom: 0;
+            }
+            button {
+                padding: 0.75em;
+                border: none;
+                border-radius: 6px;
+                color: white;
+                background-color: #0d6efd;
+            }
+
+            i {
+                visibility: hidden;
+                position: absolute;
+                top: 32px;
+                right: 10px;
+            }
+        }
+        .form-group.success {
+            i {
+                visibility: visible;
+            }
+        }
+        p {
+            margin: 0;
+        }
+    }
+}
+
+#top {
+    margin-bottom: 5px;
+    h2 {
+    	margin: 0;
+    }
+}
+
+

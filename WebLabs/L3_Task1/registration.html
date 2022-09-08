@@ -1,0 +1,84 @@
+<!-- 
+	Author: ErikMak
+	Задание №1 лабораторной №3
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="top">
+		<h2>Регистрация</h2>
+	</div>
+	<div id="menu">
+	   <a href="registration">Регистрация</a>
+	   <hr>
+	   <a href="text1.html">Текст 1</a><br>
+	   <a href="text2.html">Текст 2</a><br>
+	</div>
+	<div id="content">
+		<h1 style="margin-top: 0">Регистрация</h1>
+		<form class="reg-form" name="reg-form" method="post" action="#">
+			<p style="margin-bottom: 0.5em"><b>Персональная информация</b></p>
+			<div class="form-group">
+				<label for="username">Имя пользователя</label>
+				<input type="text" id="username" name="username" pattern="^[a-zA-Z0-9_.]{1,30}$" required placeholder="Username" title="Используется как логин"/>
+			</div>
+			<div class="form-group">
+				<p>Ваш пол: <input type="radio" name="gender" value="Male">Мужской
+				&nbsp; <input type="radio" name="gender" value="Female">Женский</p>
+			</div>
+			<div class="form-group">
+				<label>Род деятельности</label>
+				<select name="career">
+					<option value="unemployed">Безработный</option>
+					<option value="schoolboy">Учащийся школы</option>
+					<option value="student">Студент</option>
+					<option value="specialist">Специалист</option>
+					<option value="self-employed">Самозанятый</option>
+					<option value="retiree">Пенсионер</option>
+				</select>
+			</div>
+
+			<p style="margin-bottom: 0.5em"><b>Аккаунт</b></p>
+			<div class="form-group">
+				<label for="email">E-mail адрес</label>
+				<input type="email" id="email" name="email" placeholder="Example@mail.ru" required/>
+			</div>
+			<div class="form-group">
+				<label for="pass">Пароль</label>
+				<input type="text" id="pass" name="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$" required  maxlength="20" />
+				<ul>
+				 <li><span style="margin-right: 5px; font-size: 10px;">&check;</span><small>Пароль состоит из не менее 6 символов</small></li>
+				 <li><span style="margin-right: 5px; font-size: 10px;">&check;</span><small>Содержит латинские буквы разного регистра</small></li>
+				 <li><span style="margin-right: 5px; font-size: 10px;">&check;</span><small>Содержит хотя бы одно число</small></li>
+				</ul>
+			</div>
+			<div class="form-group">
+				<label for="confirm-pass">Подтверждение пароля</label>
+				<i><svg style="color: rgb(8, 157, 6);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" zoomAndPan="magnify" viewBox="0 0 30 30.000001" height="20" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 2.328125 4.222656 L 27.734375 4.222656 L 27.734375 24.542969 L 2.328125 24.542969 Z M 2.328125 4.222656 " clip-rule="nonzero" fill="#089d06"></path></clipPath></defs><g clip-path="url(#id1)"><path fill="#089d06" d="M 27.5 7.53125 L 24.464844 4.542969 C 24.15625 4.238281 23.65625 4.238281 23.347656 4.542969 L 11.035156 16.667969 L 6.824219 12.523438 C 6.527344 12.230469 6 12.230469 5.703125 12.523438 L 2.640625 15.539062 C 2.332031 15.84375 2.332031 16.335938 2.640625 16.640625 L 10.445312 24.324219 C 10.59375 24.472656 10.796875 24.554688 11.007812 24.554688 C 11.214844 24.554688 11.417969 24.472656 11.566406 24.324219 L 27.5 8.632812 C 27.648438 8.488281 27.734375 8.289062 27.734375 8.082031 C 27.734375 7.875 27.648438 7.679688 27.5 7.53125 Z M 27.5 7.53125 " fill-opacity="1" fill-rule="nonzero"></path></g></svg></i>
+				<input type="text" id="confirm-pass" name="confirm-pass" required  maxlength="20" />
+			</div>
+
+			<div class="form-group">
+			  <label>
+			    <input type="checkbox" name="newsletter" />
+			    <span>Уведомлять меня о новых публикациях<span>
+			  </label>
+			</div>
+
+			<div class="form-group">
+				<button onclick="validateForm()"><b>Создать аккаунт</b></button>
+			</div>
+		</form>
+	</div>
+	<div id="bottom">
+	   Подвал
+  	</div>
+</body>
+<script src="script.js"></script>
+</html>

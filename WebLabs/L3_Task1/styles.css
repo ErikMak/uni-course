@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffbf6;
+}
+#menu,
+#top,
+#content,
+#bottom {
+  background-color: #fef5e9;
+  border: solid 1px black;
+  padding: 1.2em;
+}
+#menu {
+  float: left;
+  width: 20%;
+}
+#content {
+  margin-left: 23%;
+  margin-bottom: 5px;
+}
+#content strong {
+  text-decoration: underline;
+  font-weight: normal;
+}
+#content .img-wrapper {
+  margin-left: 1em;
+  padding: 2%;
+  height: 350px;
+  width: fit-content;
+  background-color: white;
+}
+#content .img-wrapper img {
+  height: 100%;
+}
+#content .anchors li {
+  margin: 0.5em 0;
+}
+#content .reg-form {
+  width: 320px;
+}
+#content .reg-form label {
+  margin-bottom: 5px;
+}
+#content .reg-form input,
+#content .reg-form select {
+  padding: 0.5em;
+  border: 2px solid grey;
+  border-radius: 6px;
+}
+#content .reg-form input[type="checkbox"]:checked + span {
+  text-decoration: underline;
+}
+#content .reg-form input[type="text"]:invalid,
+#content .reg-form input[type="email"]:invalid {
+  border: 2px solid #e53838;
+}
+#content .reg-form input[type="text"]:valid,
+#content .reg-form input[type="email"]:valid {
+  border: 2px solid green;
+}
+#content .reg-form .form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+#content .reg-form .form-group li {
+  list-style-type: none;
+}
+#content .reg-form .form-group ul {
+  padding-left: 0.8em;
+  margin-bottom: 0;
+}
+#content .reg-form .form-group button {
+  padding: 0.75em;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: #0d6efd;
+}
+#content .reg-form .form-group i {
+  visibility: hidden;
+  position: absolute;
+  top: 32px;
+  right: 10px;
+}
+#content .reg-form .form-group.success i {
+  visibility: visible;
+}
+#content .reg-form p {
+  margin: 0;
+}
+#top {
+  margin-bottom: 5px;
+}
+#top h2 {
+  margin: 0;
+}

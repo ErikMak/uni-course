@@ -1,0 +1,83 @@
+<!-- 
+	Author: ErikMak
+	Задание лабораторной №2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="top">
+		<h2>Регистрация</h2>
+	</div>
+	<div id="menu">
+	   <a href="registration">Регистрация</a>
+	   <hr>
+	   <a href="text1.html">Текст 1</a><br>
+	   <a href="text2.html">Текст 2</a><br>
+	</div>
+	<div id="content">
+		<h1 style="margin-top: 0">Регистрация</h1>
+		<form class="reg-form" name="contact_form" method="post" action="#">
+			<p style="margin-bottom: 0.5em"><b>Персональная информация</b></p>
+			<div class="form-item">
+				<label for="username">Имя пользователя</label>
+				<input type="text" id="username" name="username" pattern="^[a-zA-Z0-9_.]{1,30}$" required placeholder="Username" title="Используется как логин"/>
+			</div>
+			<div class="form-item">
+				<p>Ваш пол: <input type="radio" name="gender" value="Male">Мужской
+				&nbsp; <input type="radio" name="gender" value="Female">Женский</p>
+			</div>
+			<div class="form-item">
+				<label>Род деятельности</label>
+				<select name="career">
+					<option value="unemployed">Безработный</option>
+					<option value="schoolboy">Учащийся школы</option>
+					<option value="student">Студент</option>
+					<option value="specialist">Специалист</option>
+					<option value="self-employed">Самозанятый</option>
+					<option value="retiree">Пенсионер</option>
+				</select>
+			</div>
+
+			<p style="margin-bottom: 0.5em"><b>Аккаунт</b></p>
+			<div class="form-item">
+				<label for="email">E-mail адрес</label>
+				<input type="email" id="email" name="email" placeholder="Example@mail.ru" required/>
+			</div>
+			<div class="form-item">
+				<label for="pass">Пароль</label>
+				<input type="text" id="pass" name="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$" required  maxlength="20" />
+				<ul>
+				 <li><span style="margin-right: 5px; font-size: 10px;">&check;</span><small>Пароль состоит из не менее 6 символов</small></li>
+				 <li><span style="margin-right: 5px; font-size: 10px;">&check;</span><small>Содержит латинские буквы разного регистра</small></li>
+				 <li><span style="margin-right: 5px; font-size: 10px;">&check;</span><small>Содержит хотя бы одно число</small></li>
+				</ul>
+			</div>
+			<div class="form-item">
+				<label for="confirm-pass">Подтверждение пароля</label>
+				<input type="text" id="confirm-pass" name="confirm-pass" required  maxlength="20" />
+			</div>
+
+			<div class="form-item">
+			  <label>
+			    <input type="checkbox" name="newsletter" />
+			    <span>Уведомлять меня о новых публикациях<span>
+			  </label>
+			</div>
+
+			<div class="form-item">
+				<button><b>Создать аккаунт</b></button>
+			</div>
+		</form>
+	</div>
+	<div id="bottom">
+	   Подвал
+  	</div>
+
+</body>
+</html>
