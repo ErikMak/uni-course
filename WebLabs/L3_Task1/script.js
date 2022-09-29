@@ -1,19 +1,43 @@
-
-let elem = document.getElementById("confirm-pass");
-elem.addEventListener("focusout", validateForm);
-
-let elem2 = document.getElementById("pass");
-elem2.addEventListener("focusout", validateForm);
-
-function validateForm() {
-	let pass = document.forms["reg-form"]["pass"].value;
-	let rep_pass = document.forms["reg-form"]["confirm-pass"].value;
-
-	let form_group = document.getElementsByClassName("form-group")[5];
-
-	form_group.classList.remove("success");
-
-	if (rep_pass === pass) {
-		form_group.classList.add("success");
+/* 
+  Author: ErikMak
+  Задание №1 лабораторной №3 
+*/
+function checkConfirmPass(form) {
+	const input = form.querySelector('#confirm-pass');
+	const value = input.value.trim();
+	const password = form.querySelector('#pass').value.trim();
+	
+	if(password === value && value != '') {
+		setSuccessFor(input.parentElement);
+	} else {
+		setErrorFor(input.parentElement);
 	}
 }
+
+function validateForm() {
+	const formHandle = document.querySelector('#reg-form');
+
+
+	checkConfirmPass(formHandle);
+}
+
+function setErrorFor(form_group) {
+	form_group.classList.remove('success');
+}
+
+function setSuccessFor(form_group) {
+	form_group.classList.add('success');
+}
+
+
+// BUTTON CLICK EVENT
+document.addEventListener('DOMContentLoaded', function() {
+	console.log('Скрипт написан https://github.com/ErikMak');
+	let btn = document.querySelector('.submit-btn');
+
+	btn.addEventListener('click', e => {
+		e.preventDefault();
+
+		validateForm();
+	});
+});

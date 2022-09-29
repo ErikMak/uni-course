@@ -1,3 +1,7 @@
+/* 
+	Author: ErikMak
+	Задание лабораторной №2
+*/
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +23,9 @@ body {
   margin-left: 23%;
   margin-bottom: 5px;
 }
+#content p {
+  margin-left: 1em;
+}
 #content strong {
   text-decoration: underline;
   font-weight: normal;
@@ -26,7 +33,7 @@ body {
 #content .img-wrapper {
   margin-left: 1em;
   padding: 2%;
-  height: 350px;
+  height: 20vw;
   width: fit-content;
   background-color: white;
 }
@@ -72,12 +79,20 @@ body {
   padding-left: 0.8em;
   margin-bottom: 0;
 }
-#content .reg-form .form-item button {
+#content .reg-form .form-item .submit-btn {
   padding: 0.75em;
   border: none;
   border-radius: 6px;
   color: white;
   background-color: #0d6efd;
+  font-weight: 600;
+}
+#content .reg-form .form-item .submit-btn:hover {
+  cursor: pointer;
+  background-color: #125AC3;
+}
+#content .reg-form .form-item .submit-btn:active {
+  transform: scale(1.02);
 }
 #content .reg-form p {
   margin: 0;

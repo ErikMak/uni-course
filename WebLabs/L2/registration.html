@@ -3,7 +3,7 @@
 	Задание лабораторной №2
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
 		<h2>Регистрация</h2>
 	</div>
 	<div id="menu">
-	   <a href="registration">Регистрация</a>
+	   <a href="index.html">Главная</a>
 	   <hr>
 	   <a href="text1.html">Текст 1</a><br>
 	   <a href="text2.html">Текст 2</a><br>
@@ -26,7 +26,7 @@
 			<p style="margin-bottom: 0.5em"><b>Персональная информация</b></p>
 			<div class="form-item">
 				<label for="username">Имя пользователя</label>
-				<input type="text" id="username" name="username" pattern="^[a-zA-Z0-9_.]{1,30}$" required placeholder="Username" title="Используется как логин"/>
+				<input type="text" id="username" name="username" pattern="^[a-zA-Z0-9_.]{1,30}$" required placeholder="Username" title="Используйте латинские символы, цифры"/>
 			</div>
 			<div class="form-item">
 				<p>Ваш пол: <input type="radio" name="gender" value="Male">Мужской
@@ -51,7 +51,7 @@
 			</div>
 			<div class="form-item">
 				<label for="pass">Пароль</label>
-				<input type="text" id="pass" name="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$" required  maxlength="20" />
+				<input type="text" id="pass" name="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}$" required  maxlength="20" title="Не менее 6 символов: цифры и латинские буквы"/>
 				<ul>
 				 <li><span style="margin-right: 5px; font-size: 10px;">&check;</span><small>Пароль состоит из не менее 6 символов</small></li>
 				 <li><span style="margin-right: 5px; font-size: 10px;">&check;</span><small>Содержит латинские буквы разного регистра</small></li>
@@ -60,24 +60,22 @@
 			</div>
 			<div class="form-item">
 				<label for="confirm-pass">Подтверждение пароля</label>
-				<input type="text" id="confirm-pass" name="confirm-pass" required  maxlength="20" />
+				<input type="text" id="confirm-pass" name="confirm-pass" required  maxlength="20"/>
 			</div>
 
 			<div class="form-item">
 			  <label>
 			    <input type="checkbox" name="newsletter" />
-			    <span>Уведомлять меня о новых публикациях<span>
+			    <span>Уведомлять меня о новых публикациях</span>
 			  </label>
 			</div>
-
 			<div class="form-item">
-				<button><b>Создать аккаунт</b></button>
+				<input type="submit" class="submit-btn" value="Создать аккаунт">
 			</div>
 		</form>
 	</div>
 	<div id="bottom">
-	   Подвал
+		Автор: <a href="https://github.com/ErikMak">https://github.com/ErikMak</a>
   	</div>
-
 </body>
 </html>

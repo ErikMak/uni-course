@@ -1,3 +1,7 @@
+/*
+	Author: ErikMak
+	Задание №5 лабораторной №1 
+*/
 body {
   margin: 0;
   padding: 0;
@@ -29,7 +33,7 @@ body {
 #content .img-wrapper {
   margin-left: 1em;
   padding: 2%;
-  height: 350px;
+  height: 20vw;
   width: fit-content;
   background-color: white;
 }
