@@ -1,0 +1,45 @@
+/* 
+  Author: ErikMak
+  Задание №3 лабораторной №3 
+*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #E6F4FF;
+  font-family: 'Segoe UI';
+}
+#top {
+  margin: 1.4em 2em;
+  color: #494949;
+}
+#content {
+  width: 70%;
+  margin: 0 auto;
+}
+#content .card {
+  margin-bottom: 2em;
+  background: white;
+  padding: 2em;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#content .success {
+  background-color: #DFFFDD;
+}
+#content .error {
+  background-color: #FFDEDE;
+}
+#content .answers {
+  padding-left: .5em;
+  margin-bottom: 0;
+  list-style: none;
+}
+#content .answers .answers-line {
+  margin-top: .5em;
+}
+#content .answers .answers-line .card-checkbox {
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 8px;
+  transform: translateY(0.085em);
+}

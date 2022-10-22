@@ -1,0 +1,58 @@
+<!-- 
+    Author: ErikMak
+    Задание №3 лабораторной №4
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="top">
+    <h2>Маркет</h2>
+    </div>
+    <div id="menu">
+       <a href="index.html">Главная</a>
+       <hr>
+       <a href="text1.html">Текст 1</a><br>
+       <a href="text2.html">Текст 2</a><br>
+       <a href="registration.html">Регистрация</a><br>
+    </div>
+    <div id="content">
+        <div class="item_box">
+            <h3 class="item_title">Samsung Galaxy</h3>
+            <p>&#x1F525;&nbsp;Цена: <span class="item_price">50</span>$</p>
+            <button class="btn-success add_item" data-id="7">
+                Добавить в корзину
+            </button>
+        </div>
+        <div class="item_box">
+            <h3 class="item_title">Apple Macbook</h3>
+            <p>&#x1F525;&nbsp;Цена: <span class="item_price">200</span>$</p>
+            <button class="btn-success add_item" data-id="2">
+                Добавить в корзину
+            </button>
+        </div>
+        <div class="item_box">
+            <h3 class="item_title">Lenovo Ideapad</h3>
+            <p>&#x1F525;&nbsp;Цена: <span class="item_price">1000</span>$</p>
+            <button class="btn-success add_item" data-id="5">
+                Добавить в корзину
+            </button>
+        </div>
+        <p>
+            <button class="btn-info" id="checkout">Оформить заказ</button> &nbsp; 
+            <button class="btn-info" id="clear_cart">Очистить корзину</button>
+        </p>
+        <div id="cart_content"></div>
+    </div>
+    <div id="bottom">
+        Автор: <a href="https://github.com/ErikMak">https://github.com/ErikMak</a>
+    </div>
+<script src="market.js"></script>
+</body>
+</html>

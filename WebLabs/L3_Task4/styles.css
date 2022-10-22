@@ -1,0 +1,27 @@
+/* 
+  Author: ErikMak
+  Задание №4 лабораторной №3 
+*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f9ff;
+  font-family: 'Segoe UI';
+}
+#top {
+  margin: 1.4em 2em;
+  color: #494949;
+}
+#content {
+  margin-left: 3em;
+}
+.img-wrapper {
+  margin-left: 1em;
+  padding: 30px;
+  height: 30vw;
+  width: fit-content;
+  background-color: white;
+}
+.img-wrapper img {
+  height: 100%;
+}

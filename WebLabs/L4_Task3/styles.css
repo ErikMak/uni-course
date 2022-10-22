@@ -1,0 +1,202 @@
+/* 
+  Author: ErikMak
+  Задание №3 лабораторной №4
+*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffbf6;
+}
+#menu,
+#top,
+#content,
+#bottom {
+  background-color: #fef5e9;
+  border: solid 1px black;
+  padding: 1.2em;
+}
+button:active {
+  transform: scale(1.02);
+}
+button {
+  padding: 0.75em;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+}
+.btn-success {
+  background-color: #24BA55;
+}
+.btn-info {
+  background-color: #0d6efd;
+}
+.btn-danger {
+  background-color: #FB4444;
+}
+.btn-success:hover {
+  background-color: #13963E;
+}
+.btn-info:hover {
+  background-color: #125AC3;
+}
+.btn-danger:hover {
+  background-color: #C62626;
+}
+#menu {
+  float: left;
+  width: 20%;
+}
+.overlay {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.popup {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+#popup-close {
+  position: absolute;
+  right: 13px;
+  top: 12px;
+  font-size: 17px;
+  text-decoration: none;
+  color: #CC0202;
+  font-weight: 700;
+}
+.is-visible,
+.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+#content {
+  margin-left: 23%;
+  margin-bottom: 5px;
+}
+#content p {
+  margin-left: 1em;
+}
+#content strong {
+  text-decoration: underline;
+  font-weight: normal;
+}
+#content .img-wrapper {
+  margin-left: 1em;
+  padding: 2%;
+  height: 20vw;
+  width: fit-content;
+  background-color: white;
+}
+#content .img-wrapper img {
+  height: 100%;
+}
+#content .anchors li {
+  margin: 0.5em 0;
+}
+#content #reg-form {
+  width: 320px;
+}
+#content #reg-form label {
+  margin-bottom: 5px;
+}
+#content #reg-form input,
+#content #reg-form select {
+  padding: 0.5em;
+  border: 2px solid grey;
+  border-radius: 6px;
+}
+#content #reg-form input[type="checkbox"]:checked + span {
+  text-decoration: underline;
+}
+#content #reg-form .form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  margin-bottom: 0.2em;
+}
+#content #reg-form .form-group li {
+  list-style-type: none;
+}
+#content #reg-form .form-group ul {
+  padding-left: 0.8em;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+#content #reg-form .form-group ul p {
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+#content #reg-form .form-group i {
+  visibility: hidden;
+  position: absolute;
+  top: 31px;
+  right: 10px;
+}
+#content #reg-form .form-group small {
+  visibility: hidden;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #e53838;
+}
+#content #reg-form .success i {
+  visibility: visible;
+}
+#content #reg-form .error small {
+  visibility: visible;
+}
+#content #reg-form p {
+  margin: 0;
+}
+#content .item_box,
+#content #cart_content {
+  border: 1px solid #999;
+  margin-bottom: 10px;
+  padding: 1em;
+}
+#content .item_box h3,
+#content #cart_content h3 {
+  margin: 0;
+}
+#content .item_box p,
+#content #cart_content p {
+  margin-left: 0;
+}
+#content .shopping_list {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+#content .shopping_list td,
+#content .shopping_list th {
+  padding: 10px;
+  border: 1px solid #AAAAAA;
+}
+#top {
+  margin-bottom: 5px;
+}
+#top h2 {
+  margin: 0;
+}

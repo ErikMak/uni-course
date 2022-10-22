@@ -103,3 +103,9 @@ body {
 #top h2 {
   margin: 0;
 }
+
+#content .reg-form input[name="gender"]:after {
+  content: "";
+  position: absolute;
+  display: none;
+}

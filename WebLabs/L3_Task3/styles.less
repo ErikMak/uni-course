@@ -1,0 +1,45 @@
+@blue: #E6F4FF;
+
+body {
+	margin:0;
+	padding:0;
+	background: @blue;
+	font-family: 'Segoe UI';
+}
+
+#top {
+	margin: 1.4em 2em;
+	color: #494949;
+}
+
+#content {
+	width: 70%;
+	margin: 0 auto;
+	.card {
+		margin-bottom: 2em;
+		background: white;
+		padding: 2em;
+		border-radius: 6px;
+		box-shadow: 0 0 10px rgba(0,0,0, .1);
+	}
+	.success {
+		background-color:#DFFFDD;
+	}
+	.error {
+		background-color: #FFDEDE;
+	}
+	.answers {
+		padding-left: .5em;
+		margin-bottom: 0;
+		list-style: none;
+		.answers-line {
+			margin-top: .5em;
+			.card-checkbox {
+				width: 1.1em;
+  				height: 1.1em;
+  				margin-right: 8px;
+  				transform: translateY(0.085em);
+			}
+		}
+	}
+}
