@@ -29,6 +29,22 @@
 	<div id="bottom">
 		Автор: <a href="https://github.com/ErikMak">https://github.com/ErikMak</a>
   	</div>
+  	<script>
+  		function getCartData(){
+			return JSON.parse(localStorage.getItem('cart'));
+		}
 
+		let cartData = getCartData();
+		if(cartData !== null){
+			const text = document.getElementById('top').querySelector('h2');
+			let totalPrice = 0;
+
+			for(let i = 0; i < cartData.length; i++){
+					totalPrice += cartData[i].itemPrice;
+			}
+
+			text.innerHTML = 'В корзине товаров на сумму '+totalPrice;
+		}
+  	</script>
 </body>
 </html>

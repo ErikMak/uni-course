@@ -1,0 +1,28 @@
+/* 
+  Author: ErikMak
+  Задание №1 лабораторной №5 
+*/
+@charset "utf-8";
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+.over-header {
+  background-color: #e98131;
+}
+.over-header span {
+  font-size: 15px;
+}
+nav {
+  border-bottom: 5px solid #e98131;
+}
+nav .navbar-nav .active {
+  color: #f36b00 !important;
+}
+.about-container h1 {
+  color: #f36b00 !important;
+}
+.content .content-title,
+.content .card .card-title {
+  color: #f36b00;
+}

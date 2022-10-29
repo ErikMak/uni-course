@@ -1,0 +1,184 @@
+<!-- 
+	Author: ErikMak
+	Задание №1 лабораторной №5
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="res/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
+	<link href="res/bootstrap-reboot.min.css" rel="stylesheet"> <!-- Bootstrap Reboot -->
+	<link href="styles.css" rel="stylesheet">
+	<link href="res/icons.css" rel="stylesheet"> <!-- Icons -->
+	<script defer src="res/icons.js"></script> <!-- Icons -->
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="over-header row ">
+			<div class="col-12 d-flex justify-content-between py-1">
+				<div class="d-flex">
+					<div class="d-flex align-items-center me-3">
+						<span class="me-1 text-white"><i class="far fa-envelope-open"></i></span>
+						<a class="text-white" href="https://github.com/ErikMak">https://github.com/ErikMak</a>
+					</div>
+					<div class="d-flex align-items-center">
+						<span class="me-1 text-white"><i class="fas fa-phone-alt"></i></span>
+						<a href="" class="text-white">+7 (960) 1234 5678</a>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div class="d-flex align-items-center me-3">
+						<a href="#">
+							<span class="text-white"><i class="fab fa-vk"></i></span>
+						</a>
+					</div>
+					<div class="d-flex align-items-center">
+						<a href="#">
+							<span class="text-white"><i class="fab fa-odnoklassniki"></i></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg bg-light sticky-top">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">Лабораторная работа №5</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+	      <ul class="navbar-nav">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">Главная</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Шаблоны сайтов</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="feedback.html">Обратная связь</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Что-то еще</a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Лабораторные работы
+	          </a>
+	          <ul class="dropdown-menu">
+	            <li><a class="dropdown-item" href="#">Лаба2</a></li>
+	            <li><a class="dropdown-item" href="#">Лаба3</a></li>
+	            <li><a class="dropdown-item" href="#">Лаба4</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div class="about-container container-fluid">
+		<div class="row py-3">
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<div id="carouselIndicators" class="carousel slide" data-bs-ride="true">
+				  <div class="carousel-indicators">
+				    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				  </div>
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <img src="images/carousel_1.png" class="d-block w-100">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="images/carousel_2.png" class="d-block w-100">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="images/carousel_3.png" class="d-block w-100">
+				    </div>
+				  </div>
+				  <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="visually-hidden">Next</span>
+				  </button>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12 desc">
+				<h1 class="text-center">О проекте</h1>
+				<p>Bootstrap является самой популярной в мире платформой для создания адаптивных, ориентированных на мобильные устройства сайтов</p>
+				<p>Проект выполняется в виде  лендинг страницы, 
+           		демонстрирующей основные возможности Bootsrap 5.</p>
+           		<p>Лендинг пейдж (landing page) или просто «лендинг» — это особый тип сайтов, оптимизированных для побуждения к действию интернет-пользователя.</p>
+
+           		<div class="d-grid">
+           			<button type="button" class="btn btn-light" data-bs-toggle="collapse" data-bs-target="#collapsed-text">Подробнее</button>
+           		</div>
+           		<div id="collapsed-text" class="collapse mt-3">
+                    Этот пример демонстрирует возможности Collaps - плагина свертывания, позволяющего скрыть и показать большой объем контента
+                </div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="container-fluid">
+			<h1 class="content-title text-center">Адаптивные шаблоны сайтов на Bootstrap</h1>
+			<h3 class="text-center mb-3">Пример плагина Cards</h3>
+			<div class="row">
+				<div class="col-md-6 col-lg-3 col-sm-12 pb-3">
+					<div class="card">
+					  <img src="images/img_1.png" class="card-img-top">
+					  <div class="card-body">
+					  	<h5 class="card-title">Вариант 1 - Landing</h5>
+					    <p class="card-text">Бесплатный</p>
+					  </div>
+					  <div class="card-footer">
+					    <a href="#" class="text-decoration-underline card-link">Демо</a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 col-sm-12 pb-3">
+					<div class="card">
+					  <img src="images/img_2.png" class="card-img-top">
+					  <div class="card-body">
+					  	<h5 class="card-title">Вариант 2 - Landing</h5>
+					    <p class="card-text">Бесплатный</p>
+					  </div>
+					  <div class="card-footer">
+					    <a href="#" class="text-decoration-underline card-link">Демо</a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 col-sm-12 pb-3">
+					<div class="card">
+					  <img src="images/img_3.png" class="card-img-top">
+					  <div class="card-body">
+					  	<h5 class="card-title">Вариант 3 - Landing</h5>
+					    <p class="card-text">Бесплатный</p>
+					  </div>
+					  <div class="card-footer">
+					    <a href="#" class="text-decoration-underline card-link">Демо</a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 col-sm-12 pb-3">
+					<div class="card">
+					  <img src="images/img_4.png" class="card-img-top">
+					  <div class="card-body">
+					  	<h5 class="card-title">Вариант 4 - Landing</h5>
+					    <p class="card-text">Бесплатный</p>
+					  </div>
+					  <div class="card-footer">
+					    <a href="#" class="text-decoration-underline card-link">Демо</a>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="res/bootstrap.bundle.min.js"></script> <!--Bootstrap Bundle JS-->
+</body>
+</html>

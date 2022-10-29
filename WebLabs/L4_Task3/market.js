@@ -80,10 +80,11 @@ function openCart() {
 
 // EVENTS 
 document.addEventListener('DOMContentLoaded', function() {
-	console.log('Скрипт написан https://github.com/ErikMak');
+	// console.log('Скрипт написан https://github.com/ErikMak');
 	const checkout_btn = document.querySelector('#checkout');
 	const clear_cart_btn = document.querySelector('#clear_cart');
 	const purchase_btns = document.querySelectorAll('.add_item');
+	const cart_content = document.getElementById('cart_content');
 
 	checkout_btn.addEventListener('click', e => {
 		e.preventDefault();

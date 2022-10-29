@@ -1,0 +1,133 @@
+<!-- 
+	Author: ErikMak
+	Задание №2 лабораторной №5
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="res/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
+	<link href="res/bootstrap-reboot.min.css" rel="stylesheet"> <!-- Bootstrap Reboot -->
+	<link href="res/icons.css" rel="stylesheet"> <!-- Icons -->
+	<script defer src="res/icons.js"></script> <!-- Icons -->
+	<style>
+        .header {
+          background-color: #f48000;
+          height: 12vh;
+        }
+        .sidebar {
+          height: 88vh;
+          background-color: #0189e1;
+        }
+        .content {
+          height: 76vh;
+          background-color: #fdfa00;
+        }
+        .box1 {
+          bottom: 20%;
+          right: 12em;
+          height: 10vh;
+          width: 200px;
+          background-color: #f38000;
+        }
+        .box2 {
+          top: 70%;
+          left: 60%;
+          width: 200px;
+          height: 10vh;
+          background-color: #ee2f74;
+        }
+        .footer {
+          background-color: #00904a;
+          height: 12vh;
+        }
+        img {
+        	max-height: 10vh;
+        }
+    </style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row header">
+			<nav class="navbar navbar-expand-lg">
+			  <div class="container-fluid" style="background-color: #f48000;">
+			    <a class="navbar-brand" href="#">Сайт</a>
+			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			      <span class="navbar-toggler-icon"></span>
+			    </button>
+			    <div class="collapse navbar-collapse" id="navbarNav">
+			      <ul class="navbar-nav">
+			        <li class="nav-item">
+			          <a class="nav-link active" aria-current="page" href="#">Ссылка 1</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Ссылка 2</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">Ссылка 3</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link disabled">Ссылка 4</a>
+			        </li>
+			      </ul>
+			    </div>
+			  </div>
+			</nav>
+		</div>
+		<div class="row">
+			<div class="sidebar col-sm-3">
+			</div>
+			<div class="col-sm-9">
+				<div class="content row position-relative">
+					<h1 class="p-4">Заголовок</h1>
+					<div class="box1 position-absolute p-0">
+						<img src="images/image_1.jpg" class="img-thumbnail rounded-0">
+						<div class="box2 position-absolute">
+							<img src="images/image_2.jpg" class="img-thumbnail rounded-0">
+						</div>
+					</div>
+				</div>
+				<div class="footer row d-flex justify-content-center align-items-center">
+					<div class="w-50">
+						<button class="btn btn-primary w-100"data-bs-toggle="modal" data-bs-target="#exampleModal">Регистрация</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h1 class="modal-title fs-5" id="exampleModalLabel">Регистрация</h1>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+					  <div class="mb-3">
+					    <label for="exampleInputEmail1" class="form-label">E-mail адрес</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@mail.com">
+					    <div id="emailHelp" class="form-text">Подсказка к e-mail адресу</div>
+					  </div>
+					  <div class="mb-3">
+					    <label for="exampleInputPassword1" class="form-label">Пароль</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1">
+					  </div>
+					  <div class="mb-3 form-check">
+					    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+					    <label class="form-check-label" for="exampleCheck1">Чекбокс</label>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+					</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+<script src="res/bootstrap.bundle.min.js"></script> <!--Bootstrap Bundle JS-->
+</body>
+</html>

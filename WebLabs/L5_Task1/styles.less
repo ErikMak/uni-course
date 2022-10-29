@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@dark_orange: #F36B00;
+@orange: #E98131;
+
+a {
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.over-header {
+	background-color: @orange;
+	span {
+		font-size: 15px;
+	}
+}
+
+nav {
+	.navbar-nav {
+		.active {
+			color: @dark_orange !important;
+		}
+	}
+	border-bottom: 5px solid @orange;
+}
+
+.about-container {
+	h1 {
+		color: @dark_orange !important;
+	}
+}
+
+.content {
+	.content-title, .card .card-title {
+		color: @dark_orange;
+	}
+}
