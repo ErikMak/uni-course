@@ -1,0 +1,23 @@
+Напишите простой веб сервер с использованием TCPServer и BaseRequestHandler.
+За основу возьмите видео по ссылке и код ниже на Rust. Аналогичные функции
+питона указаны как комментарии рядом с соответствующими строчками на Rust, вам
+остается только собрать всё это воедино. Для тестирования работы сохраните
+какую-нибудь html страницу и попробуйте получить к ней доступ через браузер.
+
+Видео: https://www.youtube.com/watch?v=7GBlCinu9yg
+Используйте перевод субтитров, если не знаете английский.
+
+Документация TCPServer
+https://docs-python.ru/standart-library/modul-socketserver-python/
+https://docs.python.org/3/library/socketserver.html
+
+Переиспользование адресов (устранение ошибки "Address already in use"):
+https://stackoverflow.com/questions/6380057/python-binding-socket-address-already-in-use
+
+match/case
+https://habr.com/ru/articles/585216/
+https://stackoverflow.com/questions/75062113/how-to-check-if-list-includes-an-element-using-match-case
+
+Поскольку сокеты Питона позволяют читать только фиксированное количество байт за
+раз, я написал небольшой класс для чтения из сокета до конца "строки". В первом
+комментарии кода на Rust показано, как пользоваться этим классом.
